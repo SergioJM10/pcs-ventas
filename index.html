@@ -195,13 +195,13 @@ tr:hover td{background:#fafaf7}
 </style>
 </head>
 <body>
- 
+
 <!-- LOADING OVERLAY -->
 <div class="lov" id="lov">
   <div class="lov-spinner"></div>
   <div class="lov-msg" id="lovMsg">Cargando...</div>
 </div>
- 
+
 <!-- LOGIN -->
 <div class="login-screen" id="loginScreen">
   <div class="login-card">
@@ -211,9 +211,9 @@ tr:hover td{background:#fafaf7}
     <div id="loginAsesores"><div style="padding:20px;text-align:center;color:var(--text3)">Cargando...</div></div>
   </div>
 </div>
- 
+
 <div class="toast" id="toast"></div>
- 
+
 <!-- MODAL CANCELACION -->
 <div class="modal-overlay" id="modalCancelacion">
   <div class="modal">
@@ -237,7 +237,7 @@ tr:hover td{background:#fafaf7}
     </div>
   </div>
 </div>
- 
+
 <!-- MODAL ANULAR (error asesor) -->
 <div class="modal-overlay" id="modalAnular">
   <div class="modal" style="width:430px">
@@ -256,7 +256,7 @@ tr:hover td{background:#fafaf7}
     </div>
   </div>
 </div>
- 
+
 <!-- MODAL ETAPA -->
 <div class="modal-overlay" id="modalEtapa">
   <div class="modal">
@@ -275,7 +275,7 @@ tr:hover td{background:#fafaf7}
     </div>
   </div>
 </div>
- 
+
 <!-- MODAL META -->
 <div class="modal-overlay" id="modalMeta">
   <div class="modal">
@@ -295,7 +295,7 @@ tr:hover td{background:#fafaf7}
     </div>
   </div>
 </div>
- 
+
 <!-- MODAL NOTA -->
 <div class="modal-overlay" id="modalNota">
   <div class="modal" style="width:380px">
@@ -304,7 +304,7 @@ tr:hover td{background:#fafaf7}
     <div class="modal-footer"><button class="btn btn-secondary" onclick="cerrarModal('modalNota')">Cerrar</button></div>
   </div>
 </div>
- 
+
 <!-- MODAL RECOMPRA -->
 <div class="modal-overlay" id="modalRecompra">
   <div class="modal">
@@ -317,7 +317,7 @@ tr:hover td{background:#fafaf7}
     <div class="modal-footer"><button class="btn btn-secondary" onclick="cerrarModal('modalRecompra')">Cancelar</button></div>
   </div>
 </div>
- 
+
 <!-- APP -->
 <div class="app" id="appMain" style="display:none">
   <div class="sidebar">
@@ -363,20 +363,20 @@ tr:hover td{background:#fafaf7}
       </div>
     </div>
   </div>
- 
+
   <div class="main">
     <div class="topbar">
       <div class="topbar-title" id="topbarTitle">Dashboard</div>
       <div class="search-wrap">
-        <input class="search-input" id="searchInput" type="text" placeholder="🔍  Buscar cliente, folio, tel..." oninput="buscarEnVivo(this.value)" autocomplete="off">
+        <input class="search-input" id="searchInput" type="text" placeholder="🔍  Buscar cliente, folio, tel..." autocomplete="off">
         <div class="search-results" id="searchResults"></div>
       </div>
       <button class="btn btn-secondary btn-sm" onclick="recargarDatos()">↻ Actualizar</button>
       <button class="btn btn-primary btn-sm" onclick="showPage('registro',document.querySelectorAll('.nav-item')[1])">+ Nueva venta</button>
     </div>
- 
+
     <div class="content">
- 
+
       <!-- ═══ DASHBOARD ═══ -->
       <div id="page-dashboard" class="page">
         <!-- FILTRO DE PERIODO -->
@@ -401,7 +401,7 @@ tr:hover td{background:#fafaf7}
           </div>
           <span id="dashPeriodLabel" style="margin-left:auto;font-size:11px;color:var(--text3);font-weight:500"></span>
         </div>
- 
+
         <div class="metrics-grid" style="margin-bottom:12px">
           <div class="metric-card"><div class="metric-label">Ventas período</div><div class="metric-value" id="metricVentas">$0</div><div class="metric-sub" id="metricVentasSub">— meta</div></div>
           <div class="metric-card"><div class="metric-label">Servicios cerrados</div><div class="metric-value" id="metricServicios">0</div><div class="metric-sub" id="metricServiciosSub">en el período</div></div>
@@ -443,7 +443,7 @@ tr:hover td{background:#fafaf7}
           <tbody id="tablaUltimas"></tbody></table>
         </div></div>
       </div>
- 
+
       <!-- ═══ NUEVA VENTA ═══ -->
       <div id="page-registro" class="page" style="display:none">
         <div class="mode-tabs">
@@ -539,7 +539,7 @@ tr:hover td{background:#fafaf7}
           </div>
         </div>
       </div>
- 
+
       <!-- ═══ SEGUIMIENTO ═══ -->
       <div id="page-seguimiento" class="page" style="display:none">
         <div class="filters">
@@ -559,7 +559,7 @@ tr:hover td{background:#fafaf7}
           <tbody id="tablaSeguimiento"></tbody></table>
         </div></div>
       </div>
- 
+
       <!-- ═══ CANCELACIONES ═══ -->
       <div id="page-cancelaciones" class="page" style="display:none">
         <div class="filters">
@@ -572,7 +572,7 @@ tr:hover td{background:#fafaf7}
           <tbody id="tablaCancelaciones"></tbody></table>
         </div></div>
       </div>
- 
+
       <!-- ═══ HISTORIAL ═══ -->
       <div id="page-historial" class="page" style="display:none">
         <div class="filters">
@@ -590,7 +590,7 @@ tr:hover td{background:#fafaf7}
           <tbody id="tablaHistorial"></tbody></table>
         </div></div>
       </div>
- 
+
       <!-- ═══ REPORTES ═══ -->
       <div id="page-reportes" class="page" style="display:none">
         <div class="section-label">Descargar reportes</div>
@@ -625,7 +625,7 @@ tr:hover td{background:#fafaf7}
           💡 Haz clic en <strong>↻ Actualizar</strong> antes de descargar para asegurar la información más reciente.
         </div>
       </div>
- 
+
       <!-- ═══ CONFIG ═══ -->
       <div id="page-config" class="page" style="display:none">
         <div class="card" style="max-width:580px">
@@ -652,11 +652,11 @@ tr:hover td{background:#fafaf7}
           </div>
         </div>
       </div>
- 
+
     </div>
   </div>
 </div>
- 
+
 <script>
 const SCRIPT_URL="https://script.google.com/macros/s/AKfycbzVerYVEHrM9Rv0hBLJ8Euw8UNwQjLtrlU6d1_4a3VI2nNXuVgVq2egV9xnN3M3GCjm/exec";
 const CIUDADES=["Apaseo el Alto","Apaseo el Grande","Celaya","Comonfort","Cortázar","Dolores Hidalgo","El Maluco","Escobedo","Franco Tavera","Guanajuato","Huanímaro","Irapuato","Jaral del Progreso","Jáuregui","Juriquilla","Juventino Rosas","La Estancia","León","Marfil","Pénjamo","Puentecillas","Purísima del Rincón","Romita","Salamanca","Salvatierra","San Elías","San Francisco del Rincón","San José Iturbide","San Juan de la Vega","San Juan del Río","San Luis de la Paz","San Miguel de Allende","San Miguel del Olvido","Silao","Tamayo","Tenería","Tequisquiapan","Tolimán","Valtierrilla","Valle de Santiago","Villagrán"];
@@ -670,7 +670,7 @@ const PLAGAS_BASE=[
   {plaga:"Termitas",aplicaciones:3},{plaga:"Polilla",aplicaciones:3},{plaga:"Cucarachas de cocina",aplicaciones:3},
   {plaga:"Roedores",aplicaciones:1},{plaga:"Avispas",aplicaciones:1}
 ];
- 
+
 let S={
   asesorActual:null,asesores:[],servicios:[],ventas:[],seguimiento:[],
   cancelaciones:[],resumen:[],metas:[],charts:{},
@@ -678,14 +678,14 @@ let S={
   segSortDesc:true,cancSortDesc:true,
   periodo:"mes",dashDesde:null,dashHasta:null
 };
- 
+
 // ── LOADING ──
 function showLoading(msg="Cargando..."){
   document.getElementById("lov").classList.add("show");
   document.getElementById("lovMsg").textContent=msg;
 }
 function hideLoading(){document.getElementById("lov").classList.remove("show");}
- 
+
 // ── API ──
 async function api(a,p={}){
   const q=new URLSearchParams({action:a,...p}).toString();
@@ -696,14 +696,14 @@ async function apiPost(a,b){
   const r=await fetch(`${SCRIPT_URL}?action=${a}`,{method:"POST",body:JSON.stringify(b)});
   return r.json();
 }
- 
+
 // ── TOAST ──
 function toast(m,t="ok"){
   const el=document.getElementById("toast");
   el.textContent=m;el.className="toast"+(t==="error"?" error":"");
   el.style.display="block";setTimeout(()=>el.style.display="none",3500);
 }
- 
+
 // ── LOGIN ──
 async function initLogin(){
   const s=localStorage.getItem("pcs_asesor");
@@ -726,7 +726,7 @@ function seleccionarAsesor(nombre){
   S.asesorActual={nombre};localStorage.setItem("pcs_asesor",JSON.stringify(S.asesorActual));mostrarApp();
 }
 function logout(){localStorage.removeItem("pcs_asesor");location.reload();}
- 
+
 async function mostrarApp(){
   document.getElementById("loginScreen").style.display="none";
   document.getElementById("appMain").style.display="flex";
@@ -739,7 +739,7 @@ async function mostrarApp(){
   document.getElementById("dashAnio").value=hoy.getFullYear();
   await cargarDatosIniciales();
 }
- 
+
 // ── DATOS ──
 async function cargarDatosIniciales(){
   showLoading("Sincronizando datos...");
@@ -767,7 +767,7 @@ async function cargarDatosIniciales(){
   finally{hideLoading();}
 }
 async function recargarDatos(){showLoading("Actualizando...");await cargarDatosIniciales();}
- 
+
 // ── SELECTS ──
 function setOpts(id,html){const el=document.getElementById(id);if(el)el.innerHTML=html;}
 function plagas(){return S.servicios.length>0?S.servicios:PLAGAS_BASE;}
@@ -786,7 +786,7 @@ function poblarSelects(){
   if(fr&&!fr.value)fr.value=hoyStr();
   calcularPrecio();
 }
- 
+
 // ── PERÍODO DASHBOARD ──
 function setPeriodo(tipo,btn){
   // Desactivar todos los chips
@@ -794,9 +794,9 @@ function setPeriodo(tipo,btn){
   document.getElementById("dashMes").style.display="none";
   document.getElementById("dashAnio").style.display="none";
   document.getElementById("customRangeWrap").style.display="none";
- 
+
   S.periodo=tipo;
- 
+
   if(tipo==="mes"){
     if(btn)btn.classList.add("active");
     document.getElementById("dashMes").style.display="inline-block";
@@ -816,13 +816,13 @@ function setPeriodo(tipo,btn){
   }
   renderDashboard();
 }
- 
+
 function getRangoFechas(){
   const mes=parseInt(document.getElementById("dashMes").value);
   const anio=parseInt(document.getElementById("dashAnio").value);
   const hoy=new Date();
   let desde,hasta;
- 
+
   if(S.periodo==="mes"){
     desde=new Date(anio,mes,1);hasta=new Date(anio,mes+1,0);
   } else if(S.periodo==="q1"){
@@ -837,7 +837,7 @@ function getRangoFechas(){
   }
   return{desde,hasta};
 }
- 
+
 function periodoLabel(){
   const mes=parseInt(document.getElementById("dashMes").value);
   const anio=parseInt(document.getElementById("dashAnio").value);
@@ -851,30 +851,30 @@ function periodoLabel(){
   }
   return"";
 }
- 
+
 // ── DASHBOARD ──
 function renderDashboard(){
   const rango=getRangoFechas();
   const label=periodoLabel();
   document.getElementById("dashPeriodLabel").textContent=label;
- 
+
   // Filtrar ventas por período
   const vP=rango?S.ventas.filter(v=>{
     if(!v.fechaRegistro||v.estatus==="Cancelado"||v.estatus==="Anulado")return false;
     const d=new Date(v.fechaRegistro.replace(/-/g,"/"));
     return d>=rango.desde&&d<=rango.hasta;
   }):S.ventas.filter(v=>v.estatus!=="Cancelado"&&v.estatus!=="Anulado");
- 
+
   const tot=vP.reduce((s,v)=>s+(parseFloat(v.precio)||0),0);
   const cant=vP.length;
   const tkt=cant>0?Math.round(tot/cant):0;
- 
+
   // Métricas globales (no por período)
   const tels=new Set(S.ventas.filter(v=>v.telefono).map(v=>v.telefono));
   const activosClientes=S.seguimiento.filter(s=>s.estatus==="En proceso").length;
   const cancelaron=S.cancelaciones.filter(c=>c.esReagenda!=="SI").length;
   const reagendaron=S.cancelaciones.filter(c=>c.esReagenda==="SI").length;
- 
+
   document.getElementById("metricVentas").textContent=fmt(tot);
   document.getElementById("metricServicios").textContent=cant;
   document.getElementById("metricTicket").textContent=fmt(tkt);
@@ -884,7 +884,7 @@ function renderDashboard(){
   document.getElementById("metricActivosClientes").textContent=activosClientes;
   document.getElementById("metricCancelaron").textContent=cancelaron;
   document.getElementById("metricReagendaron").textContent=reagendaron;
- 
+
   // Meta — buscar meta del mes/año seleccionado en el filtro
   const mes=parseInt(document.getElementById("dashMes").value);
   const anio=parseInt(document.getElementById("dashAnio").value);
@@ -895,20 +895,20 @@ function renderDashboard(){
   document.getElementById("metaBar").style.width=pct+"%";
   document.getElementById("metricVentasSub").textContent=`de ${fmt(meta)} meta`;
   document.getElementById("metricServiciosSub").textContent=label;
- 
+
   // Breakdown asesores
   document.getElementById("asesoresMetaGrid").innerHTML=S.asesores.map(a=>{
     const t=vP.filter(v=>v.vendedor===a.nombre).reduce((s,v)=>s+(parseFloat(v.precio)||0),0);
     const p=meta>0?Math.min(100,Math.round(t/meta*100)):0;
     return`<div class="asesor-mini"><div class="asesor-mini-name">${a.nombre}</div><div class="asesor-mini-value">${fmt(t)}</div><div class="mini-bar"><div class="mini-fill" style="width:${p}%"></div></div></div>`;
   }).join("");
- 
+
   document.getElementById("metricTicketSub").textContent=S.asesores.map(a=>{
     const av=vP.filter(v=>v.vendedor===a.nombre);
     const t=av.length>0?Math.round(av.reduce((s,v)=>s+(parseFloat(v.precio)||0),0)/av.length):0;
     return`${a.nombre}: ${fmt(t)}`;
   }).join(" · ")||"—";
- 
+
   // Cómo llegar
   const falta=Math.max(0,meta-tot);
   const cEl=document.getElementById("comoLlegar");
@@ -917,16 +917,16 @@ function renderDashboard(){
   else cEl.innerHTML=`<div style="font-size:11px;color:var(--text3);margin-bottom:6px">Faltan ${fmt(falta)}</div>`+
     [{l:"1 cuarto ($590)",p:590},{l:"2 cuartos ($650)",p:650},{l:"3 cuartos ($750)",p:750}]
     .map(x=>`<div class="como-item"><span>${x.l}</span><span>${Math.ceil(falta/x.p)} ventas más</span></div>`).join("");
- 
+
   renderCharts(vP);
- 
+
   // Últimas ventas del período
   const tbody=document.getElementById("tablaUltimas");
   const ult=[...vP].reverse().slice(0,10);
   tbody.innerHTML=!ult.length?`<tr><td colspan="9" style="text-align:center;padding:30px;color:var(--text3)">Sin ventas en este período</td></tr>`:
     ult.map(v=>`<tr><td style="font-size:11px;color:var(--text3)">${v.id||"—"}</td><td><strong>${v.cliente||"—"}</strong></td><td>${v.telefono||"—"}</td><td style="font-size:12px">${v.servicio||"—"}</td><td>${v.vendedor||"—"}</td><td style="font-size:12px">${v.ciudadServicio||"—"}</td><td style="font-weight:600">${fmt(v.precio)}</td><td>${v.canalOrigen||"—"}</td><td>${badgeE(v.estatus)}</td></tr>`).join("");
 }
- 
+
 function renderCharts(vP){
   Object.values(S.charts).forEach(c=>{try{c.destroy();}catch(e){}});S.charts={};
   const bO={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{grid:{color:"#f0efe8"},ticks:{font:{size:10}}}}};
@@ -945,44 +945,74 @@ function renderCharts(vP){
   const top=Object.entries(sM).sort((a,b)=>b[1]-a[1]).slice(0,5);
   try{S.charts.servicios=new Chart(document.getElementById("chartServicios"),{type:"bar",data:{labels:top.map(x=>x[0]),datasets:[{data:top.map(x=>x[1]),backgroundColor:"#c9a84c",borderRadius:4}]},options:{...bO,indexAxis:"y",scales:{x:{grid:{color:"#f0efe8"},ticks:{font:{size:10}}},y:{grid:{display:false},ticks:{font:{size:10}}}}}});}catch(e){}
 }
- 
-// ── BUSCADOR EN VIVO (CORREGIDO) ──
-function buscarEnVivo(q){
+
+// ── BUSCADOR EN VIVO ──
+function initBuscador(){
+  const input=document.getElementById("searchInput");
   const res=document.getElementById("searchResults");
-  const qt=q.trim();
-  if(qt.length<2){res.classList.remove("open");return;}
-  const ql=qt.toLowerCase();
-  // Buscar en nombre, ID y teléfono — comparación clara
-  const found=S.ventas.filter(v=>{
-    const nombre=(v.cliente||"").toLowerCase();
-    const id=(v.id||"").toLowerCase();
-    const tel=(v.telefono||"");
-    return nombre.includes(ql)||id.includes(ql)||tel.includes(qt);
-  }).slice(0,8);
-  if(!found.length){
-    res.innerHTML=`<div style="padding:12px 16px;font-size:12px;color:var(--text3)">Sin resultados para "<strong>${qt}</strong>"</div>`;
-    res.classList.add("open");return;
-  }
-  res.innerHTML=found.map(v=>`<div class="search-item" onclick="verDetalleVenta('${esc(v.id||"")}')">
-    <div class="search-item-name">${resalta(v.cliente||"—",ql)} <span style="font-size:10px;color:var(--text3);font-weight:400">${v.id||""}</span></div>
-    <div class="search-item-sub">📞 ${v.telefono||"—"} &nbsp;·&nbsp; ${v.servicio||"—"} &nbsp;·&nbsp; ${v.vendedor||"—"} &nbsp;·&nbsp; ${badgeE(v.estatus)}</div>
-  </div>`).join("");
-  res.classList.add("open");
+  if(!input||!res)return;
+
+  input.addEventListener("input",function(){
+    const qt=this.value.trim();
+    if(qt.length<2){res.style.display="none";res.innerHTML="";return;}
+    const ql=qt.toLowerCase();
+    const found=S.ventas.filter(v=>
+      (v.cliente||"").toLowerCase().includes(ql)||
+      (v.id||"").toLowerCase().includes(ql)||
+      String(v.telefono||"").includes(qt)
+    ).slice(0,8);
+    if(!found.length){
+      res.innerHTML=`<div style="padding:12px 16px;font-size:12px;color:var(--text3)">Sin resultados para "<strong>${qt}</strong>"</div>`;
+      res.style.display="block";return;
+    }
+    res.innerHTML=found.map(v=>`<div class="search-item" data-id="${v.id||""}">
+      <div class="search-item-name">${v.cliente||"—"} <span style="font-size:10px;color:var(--text3)">${v.id||""}</span></div>
+      <div class="search-item-sub">📞 ${v.telefono||"—"} · ${v.servicio||"—"} · ${v.vendedor||"—"}</div>
+    </div>`).join("");
+    res.style.display="block";
+    // Agregar listeners a cada resultado
+    res.querySelectorAll(".search-item").forEach(el=>{
+      el.addEventListener("mousedown",function(e){
+        e.preventDefault(); // evita que el input pierda foco antes del click
+        const id=this.dataset.id;
+        verDetalleVenta(id);
+        input.value="";
+        res.style.display="none";
+      });
+    });
+  });
+
+  // Cerrar al perder foco
+  input.addEventListener("blur",function(){
+    setTimeout(()=>{res.style.display="none";},150);
+  });
+
+  // Abrir si ya tiene texto al recuperar foco
+  input.addEventListener("focus",function(){
+    if(this.value.trim().length>=2){
+      input.dispatchEvent(new Event("input"));
+    }
+  });
+
+  // Cerrar al click fuera
+  document.addEventListener("click",function(e){
+    if(!e.target.closest(".search-wrap")){
+      res.style.display="none";
+    }
+  });
 }
-function resalta(txt,q){
-  if(!q)return txt;
-  const idx=txt.toLowerCase().indexOf(q);
-  if(idx<0)return txt;
-  return txt.substring(0,idx)+`<mark style="background:var(--dorado-bg);border-radius:3px">`+txt.substring(idx,idx+q.length)+`</mark>`+txt.substring(idx+q.length);
-}
-function cerrarBusqueda(){document.getElementById("searchResults").classList.remove("open");}
+
 function verDetalleVenta(id){
-  cerrarBusqueda();document.getElementById("searchInput").value="";
   const v=S.ventas.find(vt=>vt.id===id);if(!v)return;
   const seg=S.seguimiento.find(s=>s.idVenta===id);
   alert(`📋 ${v.id||"—"}\n👤 ${v.cliente||"—"}\n📞 ${v.telefono||"—"}\n🔧 ${v.servicio||"—"}\n💰 ${fmt(v.precio)} · ${v.metodoPago||"—"}\n📡 ${v.canalOrigen||"—"}\n🏘️ ${v.ciudadServicio||"—"}\n👷 ${v.vendedor||"—"}\n📅 Cita: ${v.fecha1erServicio||"—"}\n⚙️ Aplic. actual: ${seg?.etapaActual||v.totalAplicaciones||"—"}\n🏷️ ${v.estatus||"—"}\n📝 ${v.notas||"Sin notas"}`);
 }
- 
+
+function cerrarBusqueda(){
+  const res=document.getElementById("searchResults");
+  if(res)res.style.display="none";
+}
+
 // ── SEGUIMIENTO (etapas corregidas) ──
 function numAplic(plaga){
   const pl=plagas();
@@ -993,7 +1023,7 @@ function numAplic(plaga){
   });
   return encontrado?parseInt(encontrado.aplicaciones):3;
 }
- 
+
 function toggleSortSeg(btn){
   S.segSortDesc=!S.segSortDesc;
   btn.textContent=S.segSortDesc?"↑ Recientes primero":"↓ Más antiguos primero";
@@ -1053,7 +1083,7 @@ function renderSeguimiento(){
     </tr>`;
   }).join("");
 }
- 
+
 // ── CANCELACIONES ──
 function toggleSortCanc(btn){
   S.cancSortDesc=!S.cancSortDesc;
@@ -1080,7 +1110,7 @@ function renderCancelaciones(){
     <td style="font-size:11px;color:var(--text3)">${c.fecha||"—"}</td>
   </tr>`).join("");
 }
- 
+
 // ── HISTORIAL ──
 function renderHistorial(){
   const fV=document.getElementById("filtHistVendedor")?.value||"";
@@ -1115,7 +1145,7 @@ function limpiarFiltrosHistorial(){
   ["filtHistVendedor","filtHistEstatus","filtHistDesde","filtHistHasta"].forEach(id=>{const el=document.getElementById(id);if(el)el.value="";});
   renderHistorial();
 }
- 
+
 // ── NUEVA VENTA ──
 function calcularPrecio(){
   const cu=document.getElementById("nv_cuartos")?.value||"1";
@@ -1173,11 +1203,11 @@ async function registrarVentaNormal(){
     else{hideLoading();toast("Error: "+(r.error||"desconocido"),"error");}
   }catch(e){hideLoading();toast("Error de conexión","error");}
 }
- 
+
 // ── RECOMPRA (buscador corregido) ──
 function detectarRecompra(tel){
   if(tel.length<8)return;
-  const m=S.ventas.find(v=>v.telefono===tel&&v.estatus!=="Cancelado"&&v.estatus!=="Anulado");
+  const m=S.ventas.find(v=>String(v.telefono||"")===tel&&v.estatus!=="Cancelado"&&v.estatus!=="Anulado");
   const al=document.getElementById("recompraAlert");
   if(m){
     const sg=S.seguimiento.find(s=>s.idVenta===m.id);
@@ -1200,7 +1230,7 @@ function abrirModalRecompra(){
 function filtrarRecompraModal(){
   const q=(document.getElementById("recompraBusqueda").value||"").toLowerCase().trim();
   const lista=document.getElementById("recompraListaModal");
- 
+
   // Si no hay query: mostrar solo los activos en seguimiento
   // Si hay query: buscar en TODAS las ventas (activas) por nombre o teléfono
   let candidatos;
@@ -1213,7 +1243,7 @@ function filtrarRecompraModal(){
     const ventasFiltradas=S.ventas.filter(v=>
       v.estatus!=="Cancelado"&&v.estatus!=="Anulado"&&(
         (v.cliente||"").toLowerCase().includes(q)||
-        (v.telefono||"").includes(q)
+        String(v.telefono||"").includes(q)
       )
     );
     candidatos=ventasFiltradas.map(v=>{
@@ -1224,7 +1254,7 @@ function filtrarRecompraModal(){
       };
     });
   }
- 
+
   if(!candidatos.length){
     lista.innerHTML=`<div style="padding:16px;text-align:center;font-size:12px;color:var(--text3)">Sin resultados${q?` para "<strong>${q}</strong>"`:" — sin clientes activos"}</div>`;
     return;
@@ -1272,7 +1302,7 @@ function siguienteAplic(e){
   const i=o.indexOf(e);
   return(i>=0&&i<o.length-1)?o[i+1]:"Refuerzo";
 }
- 
+
 // ── LOTE ──
 let loteN=0;
 function agregarFilaLote(){
@@ -1324,7 +1354,7 @@ async function registrarLote(){
     else{hideLoading();toast("Error: "+(r.error||"desconocido"),"error");}
   }catch(e){hideLoading();toast("Error de conexión","error");}
 }
- 
+
 // ── MODALES ──
 function abrirModalCancelacion(id,cli,ven,mon){
   if(S.cancelEnProceso)return;
@@ -1342,7 +1372,7 @@ async function confirmarCancelacion(){
   try{const r=await apiPost("registrarCancelacion",body);if(r.ok){toast("Cancelación registrada ✓");await cargarDatosIniciales();}else{hideLoading();toast("Error: "+(r.error||"desconocido"),"error");}
   }catch(e){hideLoading();toast("Error de conexión","error");}finally{S.cancelEnProceso=false;}
 }
- 
+
 function abrirModalAnular(idVenta){
   if(S.anularEnProceso)return;
   document.getElementById("anularIdVenta").value=idVenta;
@@ -1366,7 +1396,7 @@ async function confirmarAnular(){
   }catch(e){hideLoading();toast("Error de conexión","error");}
   finally{S.anularEnProceso=false;}
 }
- 
+
 function abrirModalEtapa(id,etapa,tot){
   document.getElementById("etapaIdSeg").value=id;
   document.getElementById("etapaNum").value=etapa;
@@ -1385,7 +1415,7 @@ async function confirmarEtapa(){
   try{const r=await apiPost("actualizarEtapa",body);if(r.ok){toast("Aplicación registrada ✓");cerrarModal("modalEtapa");await cargarDatosIniciales();}else{hideLoading();toast("Error: "+(r.error||"desconocido"),"error");}
   }catch(e){hideLoading();toast("Error de conexión","error");}
 }
- 
+
 // ── META ──
 function abrirModalMeta(){
   const mes=parseInt(document.getElementById("dashMes").value);
@@ -1426,11 +1456,11 @@ async function guardarMetaDesdeConfig(){
     else{S.metas=S.metas.filter(m=>!((m.mes||"").trim()===mes&&parseInt(m.anio||0)===anio));S.metas.push({mes,anio,meta});hideLoading();renderDashboard();toast("Meta guardada localmente");}
   }catch(e){S.metas=S.metas.filter(m=>!((m.mes||"").trim()===mes&&parseInt(m.anio||0)===anio));S.metas.push({mes,anio,meta});hideLoading();renderDashboard();toast("Meta guardada localmente");}
 }
- 
+
 function verNota(enc){document.getElementById("modalNotaTexto").textContent=decodeURIComponent(enc);document.getElementById("modalNota").classList.add("open");}
 function cerrarModal(id){document.getElementById(id).classList.remove("open");}
 document.querySelectorAll(".modal-overlay").forEach(el=>el.addEventListener("click",e=>{if(e.target===el)el.classList.remove("open");}));
- 
+
 // ── CONFIG ──
 function renderConfigAsesores(){
   const lista=document.getElementById("configAsesoresList");if(!lista)return;
@@ -1459,7 +1489,7 @@ function eliminarAsesor(n){
   poblarSelects();renderConfigAsesores();
   toast(`${n} eliminado de la sesión`);
 }
- 
+
 // ── REPORTES ──
 function descargarExcel(tipo){
   const wb=XLSX.utils.book_new();
@@ -1504,7 +1534,7 @@ function descargarCSV(){
   const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=`PCS_${hoyStr()}.csv`;a.click();
   toast("Descargando CSV ✓");
 }
- 
+
 // ── NAV ──
 function showPage(n,el){
   document.querySelectorAll(".page").forEach(p=>p.style.display="none");
@@ -1520,7 +1550,7 @@ function setModo(m){
   document.getElementById("modoNormal").style.display=m==="normal"?"block":"none";
   document.getElementById("modoLote").style.display=m==="lote"?"block":"none";
 }
- 
+
 // ── UTILS ──
 function fmt(n){return"$"+Math.round(n||0).toLocaleString("es-MX");}
 function hoyStr(){return new Date().toISOString().split("T")[0];}
@@ -1529,7 +1559,7 @@ function badgeE(e){
   const m={Activo:"badge-green","En proceso":"badge-dorado",Completado:"badge-gray",Cancelado:"badge-red",Reagendado:"badge-amber",Anulado:"badge-red"};
   return`<span class="badge ${m[e]||"badge-gray"}">${e||"—"}</span>`;
 }
- 
+
 // ── INIT ──
 document.addEventListener("DOMContentLoaded",()=>{
   initLogin();
@@ -1545,4 +1575,3 @@ document.addEventListener("DOMContentLoaded",()=>{
 </script>
 </body>
 </html>
- 
