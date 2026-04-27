@@ -38,7 +38,7 @@ h1,h2,h3,h4{font-family:'Syne',sans-serif}
 .search-wrap{position:relative;flex-shrink:0}
 .search-input{background:var(--bg);border:1px solid var(--border2);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--text);width:220px;font-family:'DM Sans',sans-serif;outline:none}
 .search-input:focus{border-color:var(--dorado)}
-.search-results{position:absolute;top:calc(100%+4px);left:0;right:0;background:var(--white);border:1px solid var(--border2);border-radius:8px;box-shadow:var(--shadow);z-index:200;max-height:300px;overflow-y:auto;display:none}
+.search-results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--white);border:1px solid var(--border2);border-radius:8px;box-shadow:var(--shadow);z-index:200;max-height:300px;overflow-y:auto;display:none}
 .search-results.open{display:block}
 .search-item{padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--border)}
 .search-item:last-child{border:none}
@@ -368,7 +368,7 @@ tr:hover td{background:#fafaf7}
     <div class="topbar">
       <div class="topbar-title" id="topbarTitle">Dashboard</div>
       <div class="search-wrap">
-        <input class="search-input" id="searchInput" type="text" placeholder="🔍  Buscar cliente, folio, tel..." oninput="buscarEnVivo(this.value)">
+        <input class="search-input" id="searchInput" type="text" placeholder="🔍  Buscar cliente, folio, tel..." oninput="buscarEnVivo(this.value)" onblur="setTimeout(cerrarBusqueda,200)" onfocus="if(this.value.length>=2)buscarEnVivo(this.value)" autocomplete="off">
         <div class="search-results" id="searchResults"></div>
       </div>
       <button class="btn btn-secondary btn-sm" onclick="recargarDatos()">↻ Actualizar</button>
@@ -1523,8 +1523,8 @@ function badgeE(e){
 document.addEventListener("DOMContentLoaded",()=>{
   initLogin();
   agregarFilaLote();
-  // Buscador: cerrar al click fuera
-  document.addEventListener("click",e=>{
+  // Buscador: cerrar al hacer mousedown fuera (antes del blur)
+  document.addEventListener("mousedown",e=>{
     if(!e.target.closest(".search-wrap"))cerrarBusqueda();
   });
 });
