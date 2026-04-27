@@ -737,6 +737,7 @@ async function mostrarApp(){
   const hoy=new Date();
   document.getElementById("dashMes").value=hoy.getMonth();
   document.getElementById("dashAnio").value=hoy.getFullYear();
+  initBuscador(); // iniciar buscador DESPUÉS del login, cuando el DOM ya está visible
   await cargarDatosIniciales();
 }
 
